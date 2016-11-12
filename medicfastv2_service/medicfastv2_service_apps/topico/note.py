@@ -1,0 +1,3 @@
+topico
+/home/eleuterio/proyectos/medicfastv2/MedicFastv2/medicfastv2_service/medicfastv2_service_apps/topico
+Topico
