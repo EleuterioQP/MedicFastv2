@@ -12,4 +12,4 @@ class Departamento(models.Model):
         verbose_name_plural = 'Departamentos'
 
     def __str__(self):
-        return '%s' % (self.nombre)
+        return '%s || %s' % (self.nombre, self.codigo)

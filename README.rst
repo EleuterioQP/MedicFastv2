@@ -1,4 +1,2 @@
 MedicFastv2
 ===========
-
-#proyeto
