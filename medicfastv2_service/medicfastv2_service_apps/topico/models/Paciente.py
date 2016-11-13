@@ -1,15 +1,20 @@
 from django.db import models
 from .Departamento import Departamento
+from .Historia import Historia
+from medicfastv2_service_apps.auths.models.person import Person
+from medicfastv2_service_apps.auths.models.hierarchy import Hierarchy
 
 # Create your models here.
 
 
 class Paciente(models.Model):
     nombre = models.CharField(max_length=100)
-    departamento = models.ForeignKey(
-        Departamento, null=True, blank=True)
+    departamento = models.ForeignKey(Departamento, null=True, blank=True)
+    persona = models.ForeignKey(Person, null=True, blank=True)
+    jerarquia = models.ForeignKey(Hierarchy)
+    historia = models.OneToOneField(Historia)
 
-    Create_at = models.DateTimeField(auto_now_add=True)
+    created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
     class Meta:

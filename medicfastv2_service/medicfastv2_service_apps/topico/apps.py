@@ -3,4 +3,4 @@ from django.apps import AppConfig
 
 class TopicoConfig(AppConfig):
 
-    name = 'apps.topico'
+    name = 'medicfastv2_service_apps.topico'

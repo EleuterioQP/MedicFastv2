@@ -1,10 +1,10 @@
 ﻿var baseUrl = 'http://localhost:9000/';
 var loginUrl = 'http://localhost:9001/auth_web/';
-var iotecaUrl = 'http://localhost:9001/ioteca_web/';
+var iotecaUrl = 'http://localhost:9001/medicfastv2_web/';
 
 
-var clientId = '1mDR3zdKmNxeMHoqSJfOfX4JBwSvw93zRK2GaZ61';
-var clientSecret = 'dYdgBysUnR4hr3JpREHPyVsUnVw42uGgyIoc3ThsYI1pQOhKuGNhIuYe2Oc0ClPSNMhR3WFEO33uaISItfigJLPkAh22JpBkBABOQbaQuhhnTDBKVmNnEfTm6q2km3u4';
+var clientId = 'XHJWk31Fzj0uLmx49TZ8zJ1Dti31HAUTKrPNuf65';
+var clientSecret = 'Av52eK3zoqO3V58bZ1wEeOFjuQKvT71SAYfpdS2KQZpvBFWV7kIcqJg0gfTkLN6kMnzfPhLyqmKT2RyhLqFn0jg4UhKdCtihQtDSs97YJqinS4OneDZ3ttYHUc806rdR';
 var grantType = 'password';
 
 var config = {

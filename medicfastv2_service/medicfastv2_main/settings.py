@@ -37,6 +37,9 @@ ALLOWED_HOSTS = []
 
 
 INSTALLED_APPS = [
+
+    'medicfastv2_service_apps.topico.apps.TopicoConfig',
+
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -55,7 +58,6 @@ INSTALLED_APPS = [
 
     'medicfastv2_service_apps.catalogo',
     'medicfastv2_service_apps.catalogo_api',
-    'medicfastv2_service_apps.topico',
 
 
 ]
