@@ -218,6 +218,7 @@ app.constant('ROUTERS', [{
     // },
 
 // }, 
+}
 
 }]);
 
@@ -304,3 +305,4 @@ app.constant('ROUTERS', [{
 
 // // }
 // ]); 
+
