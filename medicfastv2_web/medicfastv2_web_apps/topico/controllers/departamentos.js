@@ -40,8 +40,8 @@ app
     $scope.delete = function(d) {
         if ($window.confirm("Seguro?")) {
             topicoService.Departamento.delete({ id: d.id }, function(r) {
-                $log.log("Se eliminó la categoría:" + JSON.stringify(d));
-                toastr.success('Se eliminó la categoría ' + d.nombre, 'Categoría');
+                $log.log("Se eliminó el Departamento:" + JSON.stringify(d));
+                toastr.success('Se eliminó lel Departamento ' + d.nombre, 'Categoría');
                 $scope.list(params);
             }, function(err) {
                 $log.log("Error in delete:" + JSON.stringify(err));

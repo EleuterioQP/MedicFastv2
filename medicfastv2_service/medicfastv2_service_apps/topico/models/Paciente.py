@@ -8,9 +8,9 @@ from medicfastv2_service_apps.auths.models.hierarchy import Hierarchy
 
 
 class Paciente(models.Model):
-    nombre = models.CharField(max_length=100)
-    departamento = models.ForeignKey(Departamento, null=True, blank=True)
+    codigo = models.CharField(max_length=100, null=True, blank=True)
     persona = models.ForeignKey(Person, null=True, blank=True)
+    departamento = models.ForeignKey(Departamento, null=True, blank=True)
     jerarquia = models.ForeignKey(Hierarchy)
     historia = models.OneToOneField(Historia)
 
@@ -22,4 +22,4 @@ class Paciente(models.Model):
         verbose_name_plural = 'Pacientes'
 
     def __str__(self):
-        return '%s' % (self.nombre)
+        return '%s' % (self.codigo)

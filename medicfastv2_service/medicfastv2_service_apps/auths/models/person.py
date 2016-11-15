@@ -80,6 +80,4 @@ class Person(models.Model):
         '''
 
     def __str__(self):
-        return '%s %s (%s)' % (self.first_name,
-                               self.last_name,
-                               self.national_id_doc)
+        return '%s %s %s (%s)' % (self.first_name, self.last_name, self.mother_last_name, self.national_id_doc)

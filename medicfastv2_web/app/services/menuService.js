@@ -28,30 +28,6 @@ app
         //title: 'Sección ui',
         //type: 'heading',
         menu: [{
-            title: 'Topico',
-            type: 'toggle',
-            state: 'topico',
-            menu_items: [{
-                title: 'Departamentos',
-                state: 'topico.departamentos',
-                type: 'link'
-            },//{
-            //     title: 'Test 5',
-            //     state: 'ui.test5',
-            //     type: 'link'
-            // }, {
-            //     title: 'Test Directivas',
-            //     state: 'ui.dir',
-            //     type: 'link'
-            // },
-            ]
-        }]
-    }); 
-    
-    sections.push({
-        //title: 'Sección ui',
-        //type: 'heading',
-        menu: [{
             title: 'U.I.',
             type: 'toggle',
             state: 'ui',
@@ -129,6 +105,19 @@ app
                 state: 'catalogo.catalogo.autores',
                 type: 'link'
             }, ]
+        }]
+    });
+ sections.push({
+
+        menu: [{
+            title: 'Topico',
+            type: 'toggle',
+            state: 'topico',
+            menu_items: [{
+                title: 'departamentos',
+                state: 'topico.departamentos',
+                type: 'link'
+            },]
         }]
     });
 

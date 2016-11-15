@@ -20,8 +20,9 @@ class PacienteAdmin(admin.ModelAdmin):
 
     """docstring for PacienteAdmin"""
 
-    list_display = ("nombre", "departamento", "persona", "jerarquia", "historia", "created_at", "updated_at")
-    search_fields = ['nombre']
+    list_display = ("codigo", "persona", "departamento",
+                    "jerarquia", "historia", "created_at", "updated_at")
+    search_fields = ['codigo']
     list_per_page = 3
 
 admin.site.register(Departamento, DepartamentoAdmin)

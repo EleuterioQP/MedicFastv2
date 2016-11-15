@@ -100,8 +100,6 @@ app.constant('ROUTERS_T', [{
 }]);
 
 
-
- 
 app.constant('ROUTERS', [{
     "estado.nombre": {
         "url": "/url",
@@ -180,129 +178,6 @@ app.constant('ROUTERS', [{
             "page": "Autores"
         },
         "templateUrl": "medicfastv2_web_apps/catalogo_web/views/autores/form.html"
-    },
-    // "topico.topico.departamentos": {
-    //     "url": "/departamentos",
-    //     "data": {
-    //         "section": "Topico",
-    //         "page": "Departamentos"
-    //     },
-    //     "templateUrl": "medicfastv2_web_apps/topico/views/departamentos/index.html"
-    // } 
-      // {
-    // "topico": {
-      //   "url": "/topico",
-      //   "views": {
-      //       "": {
-      //           "templateUrl": "app/views/layout.html"
-      //       },
-      //       "aside": {
-      //           "templateUrl": "app/views/aside.html"
-      //       },
-      //       "content": {
-      //           "templateUrl": "app/views/content.html"
-      //       }
-      //   }
-    // }, 
-    // "topico.topico": {
-    //     "url": "/topico",
-    //     "template": "<div ui-view ></div>"
-    // }, {
-    // "topico.topico.departamentos}": {
-    //     "url": "/departamentos",
-    //     "data": {
-    //         "section": "Topico",
-    //         "page": "Departamentos"
-    //     },
-    //     "templateUrl": "medicfastv2_web_apps/topico/views/departamentos/index.html"
-    // },
-
-// }, 
-}
+    }
 
 }]);
-
-// app.constant('ROUTERS_D', [{
-//     "estado.nombre": {
-//         "url": "/url",
-//         "data": {
-//             "section": "Menu name",
-//             "page": "Menu item name"
-//         },
-//         "templateUrl": "appname_web_apps/appname_web/views/model/index.html"
-//     },
-
-// }, {
-//     "topico": {
-//         "url": "/topico",
-//         "views": {
-//             "": {
-//                 "templateUrl": "app/views/layout.html"
-//             },
-//             "aside": {
-//                 "templateUrl": "app/views/aside.html"
-//             },
-//             "content": {
-//                 "templateUrl": "app/views/content.html"
-//             }
-//         }
-//     },
-//     "topico.topico": {
-//         "url": "/catalogo",
-//         "template": "<div ui-view ></div>"
-//     }
-// }, {
-//     "catalogo.catalogo.departamentos": {
-//         "url": "/departamentos",
-//         "data": {
-//             "section": "Topico",
-//             "page": "Departamentos"
-//         },
-//         "templateUrl": "medicfastv2_web_apps/catalogo_web/views/categorias/index.html"
-//     },
-//     // "catalogo.catalogo.categoriasNew": {
-//     //     "url": "/categorias/new",
-//     //     "data": {
-//     //         "section": "Catálogo",
-//     //         "page": "Categorías"
-//     //     },
-//     //     "templateUrl": "medicfastv2_web_apps/catalogo_web/views/categorias/form.html"
-//     // },
-//     // "catalogo.catalogo.categoriasEdit": {
-//     //     "url": "/categorias/:id/edit",
-//     //     "data": {
-//     //         "section": "Catálogo",
-//     //         "page": "Categorías"
-//     //     },
-//     //     "templateUrl": "medicfastv2_web_apps/catalogo_web/views/categorias/form.html"
-//     // }
-// },
-//     // {
-//     // "catalogo.catalogo.autores": {
-//     //     "url": "/autores",
-//     //     "data": {
-//     //         "section": "Catálogo",
-//     //         "page": "Autores"
-//     //     },
-//     //     "templateUrl": "medicfastv2_web_apps/catalogo_web/views/autores/index.html"
-//     // },
-//     // "catalogo.catalogo.autoresNew": {
-//     //     "url": "/autores/new",
-//     //     "data": {
-//     //         "section": "Catálogo",
-//     //         "page": "Autores"
-//     //     },
-//     //     "templateUrl": "medicfastv2_web_apps/catalogo_web/views/autores/form.html"
-//     // },
-//     // "catalogo.catalogo.autoresEdit": {
-//     //     "url": "/autores/:id/edit",
-//     //     "data": {
-//     //         "section": "Catálogo",
-//     //         "page": "Autores"
-//     //     },
-//     //     "templateUrl": "medicfastv2_web_apps/catalogo_web/views/autores/form.html"
-//     // },
-
-// // }
-// ]); 
-
