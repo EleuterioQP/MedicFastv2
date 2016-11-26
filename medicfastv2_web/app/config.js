@@ -111,8 +111,8 @@ app.constant('ROUTERS', [{
     },
 
 }, {
-    "catalogo": {
-        "url": "/catalogo",
+    "topico2": {
+        "url": "/topico2",
         "views": {
             "": {
                 "templateUrl": "app/views/layout.html"
@@ -125,59 +125,64 @@ app.constant('ROUTERS', [{
             }
         }
     },
-    "catalogo.catalogo": {
-        "url": "/catalogo",
+
+
+   
+    "topico2.topico2": {
+        "url": "/topico2",
         "template": "<div ui-view ></div>"
     }
 }, {
-    "catalogo.catalogo.categorias": {
-        "url": "/categorias",
+    "topico2.topico2.historias": {
+        "url": "/historias",
         "data": {
-            "section": "Catálogo",
-            "page": "Categorías"
+            "section": "Historia",
+            "page": "Historias"
         },
-        "templateUrl": "medicfastv2_web_apps/catalogo_web/views/categorias/index.html"
+        "templateUrl": "medicfastv2_web_apps/topico2_web/views/historias/index.html"
     },
-    "catalogo.catalogo.categoriasNew": {
-        "url": "/categorias/new",
+    "topico2.topico2.historiasNew": {
+        "url": "/historias/new",
         "data": {
-            "section": "Catálogo",
-            "page": "Categorías"
+            "section": "Historia",
+            "page": "Historias"
         },
-        "templateUrl": "medicfastv2_web_apps/catalogo_web/views/categorias/form.html"
+        "templateUrl": "medicfastv2_web_apps/topico2_web/views/historias/form.html"
     },
-    "catalogo.catalogo.categoriasEdit": {
-        "url": "/categorias/:id/edit",
+    "topico2.topico2.historiasEdit": {
+        "url": "/historias/:id/edit",
         "data": {
-            "section": "Catálogo",
-            "page": "Categorías"
+            "section": "Historia",
+            "page": "Historias"
         },
-        "templateUrl": "medicfastv2_web_apps/catalogo_web/views/categorias/form.html"
+        "templateUrl": "medicfastv2_web_apps/topico2_web/views/historias/form.html"
     }
-}, {
-    "catalogo.catalogo.autores": {
-        "url": "/autores",
+}, { 
+    "topico2.topico2.medicamentos": {
+        "url": "/medicamentos",
         "data": {
-            "section": "Catálogo",
-            "page": "Autores"
+            "section": "Medicamento",
+            "page": "Medicamentos"
         },
-        "templateUrl": "medicfastv2_web_apps/catalogo_web/views/autores/index.html"
+        "templateUrl": "medicfastv2_web_apps/topico2_web/views/medicamentos/index.html"
     },
-    "catalogo.catalogo.autoresNew": {
-        "url": "/autores/new",
+    "topico2.topico2.medicamentosNew": {
+        "url": "/medicamentos/new",
         "data": {
-            "section": "Catálogo",
-            "page": "Autores"
+            "section": "Medicamento",
+            "page": "Medicamentos"
         },
-        "templateUrl": "medicfastv2_web_apps/catalogo_web/views/autores/form.html"
+        "templateUrl": "medicfastv2_web_apps/topico2_web/views/medicamentos/form.html"
     },
-    "catalogo.catalogo.autoresEdit": {
-        "url": "/autores/:id/edit",
+    "topico2.topico2.medicamentosEdit": {
+        "url": "/medicamentos/:id/edit",
         "data": {
-            "section": "Catálogo",
-            "page": "Autores"
+            "section": "Medicamento",
+            "page": "Medicamentos"
         },
-        "templateUrl": "medicfastv2_web_apps/catalogo_web/views/autores/form.html"
+        "templateUrl": "medicfastv2_web_apps/topico2_web/views/medicamentos/form.html"
     }
+},
 
-}]);
+
+]);

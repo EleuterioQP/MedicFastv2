@@ -45,11 +45,11 @@ app
     });
     // $mdThemingProvider.theme('default').primaryPalette('amazingPaletteName');
 
-    $mdThemingProvider.theme('default').primaryPalette('blue', {'default': '900'})
+    $mdThemingProvider.theme('default').primaryPalette('teal')
 
 
     $mdThemingProvider.theme('docs-dark')
-        .primaryPalette('blue')
+        .primaryPalette('teal')
         .dark();
 });
 
@@ -58,7 +58,7 @@ app
     .config(function($mdThemingProvider) {
 
         $mdThemingProvider.theme('altTheme')
-            .primaryPalette('purple'); // specify primary color, all
+            .primaryPalette('blue'); // specify primary color, all
         // other color intentions will be inherited
         // from default
 

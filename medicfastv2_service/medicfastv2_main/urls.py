@@ -24,6 +24,6 @@ urlpatterns = [
     url(r'^o/', include('oauth2_provider.urls', namespace='oauth2_provider')),
 
     url(r'^api/auths/', include('medicfastv2_service_apps.auths_api.urls')),
-    url(r'^api/catalogo/', include('medicfastv2_service_apps.catalogo_api.urls')),
-    url(r'^api/topico/', include('medicfastv2_service_apps.topico.urls')),
+    #url(r'^api/catalogo/', include('medicfastv2_service_apps.catalogo_api.urls')),
+    url(r'^api/topico2/', include('medicfastv2_service_apps.topico2_api.urls')),
 ]

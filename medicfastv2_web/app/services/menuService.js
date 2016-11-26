@@ -19,40 +19,78 @@ app
     ];
 
     sections.push({
-        title: 'Dashboard',
+        title: 'Principal',
         state: 'app.dashboard',
         type: 'link'
     });
+
+
+    sections.push({
+
+            menu: [{
+                title: 'Historial Medico',
+                type: 'toggle',
+                state: 'topico2.topico2',
+                menu_items: [{
+                    title: 'Historia medica',
+                    state: 'topico2.topico2.historias',
+                    type: 'link'
+                },  
+
+                 ]
+            }]
+        });
+
+        sections.push({
+
+            menu: [{
+                title: 'Mantenimiento',
+                type: 'toggle',
+                state: 'topico2.topico2',
+                menu_items: [{
+                    title: 'Medicamento',
+                    state: 'topico2.topico2.medicamentos',
+                    type: 'link'
+                }, 
+
+                 ]
+            }]
+
+        });
+
+
+
+
 
     sections.push({
         //title: 'Sección ui',
         //type: 'heading',
         menu: [{
-            title: 'U.I.',
+            title: 'historial medico',
             type: 'toggle',
             state: 'ui',
             menu_items: [{
-                title: 'Test 1 uno más',
+                title: 'Pacientes',
                 state: 'ui.test1',
                 type: 'link'
             }, {
-                title: '2Test 2',
+                title: 'Funciones vitales',
                 state: 'ui.test2',
                 type: 'link'
             }, {
-                title: 'Test 3',
+                title: 'Transferencia',
                 state: 'ui.test3',
                 type: 'link'
             }, {
-                title: 'Test 4',
+                title: 'Consulta',
                 state: 'ui.test4',
                 type: 'link'
             }, {
-                title: 'Test 5',
+                title: 'Diagnostico',
                 state: 'ui.test5',
                 type: 'link'
             }, {
-                title: 'Test Directivas',
+                title: 'Tratamiento',
                 state: 'ui.dir',
                 type: 'link'
             }, ]
@@ -62,46 +100,45 @@ app
     sections.push({
 
         menu: [{
-            title: 'Auths System',
+            title: 'Mantenimiento',
             type: 'toggle',
             state: 'auths.system',
             menu_items: [{
-                title: 'xx',
-                state: 'auths.system.xx',
-                type: 'link'
-            }, {
-                title: 'Grupos',
+                title: 'Trabajadores',
                 state: 'auths.system.ct',
                 type: 'link'
             }, {
-                title: 'Permission',
+                title: 'Medicamentos',
                 state: 'auths.system.permission',
                 type: 'link'
             }, {
-                title: 'Menu',
+                title: 'CIE 10',
                 state: 'auths.system.menu',
                 type: 'link'
-            }, {
-                title: 'Log',
-                state: 'auths.system.log',
-                type: 'link'
-            }, ]
+            },  ]
         }]
     });
+
+
+
+
+
+
+
 
 
     sections.push({
 
         menu: [{
-            title: 'Catálogo',
+            title: 'Reporte',
             type: 'toggle',
             state: 'catalogo.catalogo',
             menu_items: [{
-                title: 'Categorías',
+                title: 'reporte Institucional',
                 state: 'catalogo.catalogo.categorias',
                 type: 'link'
             }, {
-                title: 'Autores',
+                title: 'vista',
                 state: 'catalogo.catalogo.autores',
                 type: 'link'
             }, ]

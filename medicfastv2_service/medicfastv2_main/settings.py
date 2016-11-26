@@ -38,7 +38,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
 
-    'medicfastv2_service_apps.topico.apps.TopicoConfig',
+    #'medicfastv2_service_apps.topico.apps.TopicoConfig',
 
     'django.contrib.admin',
     'django.contrib.auth',
@@ -56,9 +56,11 @@ INSTALLED_APPS = [
     'medicfastv2_service_apps.auths',
     'medicfastv2_service_apps.auths_api',
 
-    'medicfastv2_service_apps.catalogo',
-    'medicfastv2_service_apps.catalogo_api',
+    #'medicfastv2_service_apps.catalogo',
+    #'medicfastv2_service_apps.catalogo_api',
 
+    'medicfastv2_service_apps.topico2',
+    'medicfastv2_service_apps.topico2_api',
 
 ]
 
@@ -146,7 +148,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/1.9/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'es'  # 'en-us'
 
 TIME_ZONE = 'UTC'
 

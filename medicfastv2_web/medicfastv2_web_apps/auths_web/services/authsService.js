@@ -14,6 +14,19 @@ app
             "list": { method: 'GET', isArray: true, params: { query: '@query' } }
 
         }),
+
+        Historia: $resource(url + "historias/:id/", { 'id': '@id' }, {
+            "update": { method: 'PUT' },
+            "list": { method: 'GET', isArray: true, params: { query: '@query' } }
+
+        }),
+
+         Medicamento: $resource(url + "medicamentos/:id/", { 'id': '@id' }, {
+            "update": { method: 'PUT' },
+            "list": { method: 'GET', isArray: true, params: { query: '@query' } }
+
+        }),
+
         Menu: $resource(url + "menus/:id/", { 'id': '@id' }, {
             "update": { method: 'PUT' },
             //"list": { method: 'GET', isArray: false, params: { query: '@query', page: '@page', page_size: '@page_size' } }

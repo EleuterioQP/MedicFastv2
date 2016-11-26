@@ -1,19 +1,22 @@
 app
 // =========================================================================
-// Show View and Delete Autor 
+// Show View and Delete medicamento 
 // =========================================================================
-    .controller("AutorCtrl", function($scope, $state, $stateParams, catalogoService, $window, $mdDialog, $log, toastr, $filter) {
+    .controller("MedicamentoCtrl", function($scope, $state, $stateParams, topico2Service, $window, $mdDialog, $log, toastr) {
     //Valores iniciales
-    $scope.fields = 'nombre';
+    $scope.fields = 'name,codename';
     var params = {};
     $scope.lista = [];
-    $scope.autor = {};
+    $scope.medicamento = {};
+
+    
+    //$window.location = "#" + $location.path();
 
     $scope.list = function(params) {
         $scope.isLoading = true;
-        catalogoService.Autor.query(params, function(r) {
-            $scope.lista = r.results;
-            $scope.options = r.options;
+        topico2Service.Medicamento.query(params, function(r) {
+            $scope.lista = r;
+            //$scope.options = r.options;
             $scope.isLoading = false;
         }, function(err) {
             $log.log("Error in list:" + JSON.stringify(err));
@@ -22,7 +25,7 @@ app
     };
     $scope.list(params);
 
-    $scope.buscar = function(d) {
+    $scope.buscar = function() {
         params.page = 1;
         params.fields = $scope.fields;
         params.query = $scope.query;
@@ -35,9 +38,9 @@ app
 
     $scope.delete = function(d) {
         if ($window.confirm("Seguro?")) {
-            catalogoService.Autor.delete({ id: d.id }, function(r) {
-                $log.log("Se eliminó autor:" + JSON.stringify(d));
-                toastr.success('Se eliminó autor ' + d.nombre, 'Autor');
+            topico2Service.Medicamento.delete({ id: d.id }, function(r) {
+                $log.log("Se eliminó la medicamento:" + JSON.stringify(d));
+                toastr.success('Se eliminó la medicamento ' + d.nombre, 'medicamento');
                 $scope.list(params);
             }, function(err) {
                 $log.log("Error in delete:" + JSON.stringify(err));
@@ -49,15 +52,15 @@ app
 })
 
 // =========================================================================
-// Create and Update Autor
+// Create and Update medicamento
 // =========================================================================
-.controller("AutorSaveCtrl", function($scope, $state, $stateParams, catalogoService, $window, $mdDialog, $log, toastr, $filter) {
+.controller("MedicamentoSaveCtrl", function($scope, $state, $stateParams, topico2Service, $window, $mdDialog, $log, toastr) {
     //Valores iniciales
-    $scope.autor = {};
+    $scope.medicamento = {};
+
     $scope.sel = function() {
-        catalogoService.Autor.get({ id: $stateParams.id }, function(r) {
-            $scope.autor = r;
-            if (r.fecha_nac) $scope.autor.fecha_nacT = new Date($filter('date')(r.fecha_nac));
+        topico2Service.Medicamento.get({ id: $stateParams.id }, function(r) {
+            $scope.medicamento = r;
         }, function(err) {
             $log.log("Error in get:" + JSON.stringify(err));
             toastr.error(err.data.detail, err.status + ' ' + err.statusText);
@@ -68,35 +71,28 @@ app
     }
 
     $scope.save = function() {
-        if ($scope.autor.fecha_nacT) {
-            $scope.autor.fecha_nac = $filter('date')(new Date($scope.autor.fecha_nacT), 'yyyy-MM-dd');
-        }
-        if ($scope.autor.id) {
-            catalogoService.Autor.update({ id: $scope.autor.id }, $scope.autor, function(r) {
+        if ($scope.medicamento.id) {
+            topico2Service.Medicamento.update({ id: $scope.medicamento.id }, $scope.medicamento, function(r) {
                 $log.log("r: " + JSON.stringify(r));
-                toastr.success('Se editó autor ' + r.nombre, 'Autor');
-                $state.go('catalogo.catalogo.autores');
+                toastr.success('Se editó la medicamento ' + r.nombre, 'medicamento');
+                $state.go('topico2.topico2.medicamentos');
             }, function(err) {
                 $log.log("Error in update:" + JSON.stringify(err));
                 toastr.error(err.data.detail, err.status + ' ' + err.statusText);
             });
         } else {
-            catalogoService.Autor.save($scope.autor, function(r) {
+            topico2Service.Medicamento.save($scope.medicamento, function(r) {
                 $log.log("r: " + JSON.stringify(r));
-                toastr.success('Se insertó autor ' + r.nombre, 'Autor');
-                $state.go('catalogo.catalogo.autores');
+                toastr.success('Se insertó la medicamento ' + r.nombre, 'medicamento');
+                $state.go('topico2.topico2.medicamentos');
             }, function(err) {
                 $log.log("Error in save:" + JSON.stringify(err));
                 toastr.error(err.data.detail, err.status + ' ' + err.statusText);
             });
         }
-
     };
 
     $scope.cancel = function() {
-        $state.go('catalogo.catalogo.autores.new');
-
-
-
+        $state.go('topico2.topico2.medicamentos');
     };
 });

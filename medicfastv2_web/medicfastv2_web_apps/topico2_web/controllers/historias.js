@@ -1,19 +1,22 @@
 app
 // =========================================================================
-// Show View and Delete Autor 
+// Show View and Delete historia 
 // =========================================================================
-    .controller("AutorCtrl", function($scope, $state, $stateParams, catalogoService, $window, $mdDialog, $log, toastr, $filter) {
+    .controller("HistoriaCtrl", function($scope, $state, $stateParams, topico2Service, $window, $mdDialog, $log, toastr) {
     //Valores iniciales
-    $scope.fields = 'nombre';
+    $scope.fields = 'name,codename';
     var params = {};
     $scope.lista = [];
-    $scope.autor = {};
+    $scope.historia = {};
+
+    
+    //$window.location = "#" + $location.path();
 
     $scope.list = function(params) {
         $scope.isLoading = true;
-        catalogoService.Autor.query(params, function(r) {
-            $scope.lista = r.results;
-            $scope.options = r.options;
+        topico2Service.Historia.query(params, function(r) {
+            $scope.lista = r;
+            //$scope.options = r.options;
             $scope.isLoading = false;
         }, function(err) {
             $log.log("Error in list:" + JSON.stringify(err));
@@ -22,7 +25,7 @@ app
     };
     $scope.list(params);
 
-    $scope.buscar = function(d) {
+    $scope.buscar = function() {
         params.page = 1;
         params.fields = $scope.fields;
         params.query = $scope.query;
@@ -35,9 +38,9 @@ app
 
     $scope.delete = function(d) {
         if ($window.confirm("Seguro?")) {
-            catalogoService.Autor.delete({ id: d.id }, function(r) {
-                $log.log("Se eliminó autor:" + JSON.stringify(d));
-                toastr.success('Se eliminó autor ' + d.nombre, 'Autor');
+            topico2Service.Historia.delete({ id: d.id }, function(r) {
+                $log.log("Se eliminó la historia:" + JSON.stringify(d));
+                toastr.success('Se eliminó la historia ' + d.numero, 'historia');
                 $scope.list(params);
             }, function(err) {
                 $log.log("Error in delete:" + JSON.stringify(err));
@@ -49,15 +52,15 @@ app
 })
 
 // =========================================================================
-// Create and Update Autor
+// Create and Update historia
 // =========================================================================
-.controller("AutorSaveCtrl", function($scope, $state, $stateParams, catalogoService, $window, $mdDialog, $log, toastr, $filter) {
+.controller("HistoriaSaveCtrl", function($scope, $state, $stateParams, topico2Service, $window, $mdDialog, $log, toastr) {
     //Valores iniciales
-    $scope.autor = {};
+    $scope.historia = {};
+
     $scope.sel = function() {
-        catalogoService.Autor.get({ id: $stateParams.id }, function(r) {
-            $scope.autor = r;
-            if (r.fecha_nac) $scope.autor.fecha_nacT = new Date($filter('date')(r.fecha_nac));
+        topico2Service.Historia.get({ id: $stateParams.id }, function(r) {
+            $scope.historia = r;
         }, function(err) {
             $log.log("Error in get:" + JSON.stringify(err));
             toastr.error(err.data.detail, err.status + ' ' + err.statusText);
@@ -68,35 +71,28 @@ app
     }
 
     $scope.save = function() {
-        if ($scope.autor.fecha_nacT) {
-            $scope.autor.fecha_nac = $filter('date')(new Date($scope.autor.fecha_nacT), 'yyyy-MM-dd');
-        }
-        if ($scope.autor.id) {
-            catalogoService.Autor.update({ id: $scope.autor.id }, $scope.autor, function(r) {
+        if ($scope.historia.id) {
+            topico2Service.Historia.update({ id: $scope.historia.id }, $scope.historia, function(r) {
                 $log.log("r: " + JSON.stringify(r));
-                toastr.success('Se editó autor ' + r.nombre, 'Autor');
-                $state.go('catalogo.catalogo.autores');
+                toastr.success('Se editó la historia ' + r.numero, 'historia');
+                $state.go('topico2.topico2.historias');
             }, function(err) {
                 $log.log("Error in update:" + JSON.stringify(err));
                 toastr.error(err.data.detail, err.status + ' ' + err.statusText);
             });
         } else {
-            catalogoService.Autor.save($scope.autor, function(r) {
+            topico2Service.Historia.save($scope.historia, function(r) {
                 $log.log("r: " + JSON.stringify(r));
-                toastr.success('Se insertó autor ' + r.nombre, 'Autor');
-                $state.go('catalogo.catalogo.autores');
+                toastr.success('Se insertó la historia ' + r.numero, 'historia');
+                $state.go('topico2.topico2.historias');
             }, function(err) {
                 $log.log("Error in save:" + JSON.stringify(err));
                 toastr.error(err.data.detail, err.status + ' ' + err.statusText);
             });
         }
-
     };
 
     $scope.cancel = function() {
-        $state.go('catalogo.catalogo.autores.new');
-
-
-
+        $state.go('topico2.topico2.historias');
     };
 });
