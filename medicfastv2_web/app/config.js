@@ -184,5 +184,111 @@ app.constant('ROUTERS', [{
     }
 },
 
+{ 
+    "topico2.topico2.tratamientos": {
+        "url": "/tratamientos",
+        "data": {
+            "section": "Tratamiento",
+            "page": "Tratamientos"
+        },
+        "templateUrl": "medicfastv2_web_apps/topico2_web/views/tratamientos/index.html"
+    },
+    "topico2.topico2.tratamientosNew": {
+        "url": "/tratamientos/new",
+        "data": {
+            "section": "Tratamiento",
+            "page": "Tratamientos"
+        },
+        "templateUrl": "medicfastv2_web_apps/topico2_web/views/tratamientos/form.html"
+    },
+    "topico2.topico2.tratamientosEdit": {
+        "url": "/tratamientos/:id/edit",
+        "data": {
+            "section": "Tratamiento",
+            "page": "Tratamientos"
+        },
+        "templateUrl": "medicfastv2_web_apps/topico2_web/views/tratamientos/form.html"
+    }
+},
 
+
+{ 
+    "topico2.topico2.consultas": {
+        "url": "/consultas",
+        "data": {
+            "section": "Consulta",
+            "page": "Consultas"
+        },
+        "templateUrl": "medicfastv2_web_apps/topico2_web/views/consultas/index.html"
+    },
+    "topico2.topico2.consultasNew": {
+        "url": "/consultas/new",
+        "data": {
+            "section": "Consulta",
+            "page": "Consultas"
+        },
+        "templateUrl": "medicfastv2_web_apps/topico2_web/views/consultas/form.html"
+    },
+    "topico2.topico2.consultasEdit": {
+        "url": "/consultas/:id/edit",
+        "data": {
+            "section": "Consulta",
+            "page": "Consultas"
+        },
+        "templateUrl": "medicfastv2_web_apps/topico2_web/views/consultas/form.html"
+    }
+},
+
+{ 
+    "topico2.topico2.diagnosticos": {
+        "url": "/diagnosticos",
+        "data": {
+            "section": "Diagnostico",
+            "page": "Diagnosticos"
+        },
+        "templateUrl": "medicfastv2_web_apps/topico2_web/views/diagnosticos/index.html"
+    },
+    "topico2.topico2.diagnosticosNew": {
+        "url": "/diagnosticos/new",
+        "data": {
+            "section": "Diagnostico",
+            "page": "Diagnosticos"
+        },
+        "templateUrl": "medicfastv2_web_apps/topico2_web/views/diagnosticos/form.html"
+    },
+    "topico2.topico2.diagnosticosEdit": {
+        "url": "/diagnosticos/:id/edit",
+        "data": {
+            "section": "Diagnostico",
+            "page": "Diagnosticos"
+        },
+        "templateUrl": "medicfastv2_web_apps/topico2_web/views/diagnosticos/form.html"
+    }
+},
+{ 
+    "topico2.topico2.especificacionrecetas": {
+        "url": "/especificacionrecetas",
+        "data": {
+            "section": "EspecificacionReceta",
+            "page": "EspecificacionRecetas"
+        },
+        "templateUrl": "medicfastv2_web_apps/topico2_web/views/especificacionrecetas/index.html"
+    },
+    "topico2.topico2.especificacionrecetasNew": {
+        "url": "/especificacionrecetas/new",
+        "data": {
+            "section": "EspecificacionReceta",
+            "page": "EspecificacionRecetas"
+        },
+        "templateUrl": "medicfastv2_web_apps/topico2_web/views/especificacionrecetas/form.html"
+    },
+    "topico2.topico2.especificacionrecetasEdit": {
+        "url": "/especificacionrecetas/:id/edit",
+        "data": {
+            "section": "EspecificacionReceta",
+            "page": "EspecificacionRecetas"
+        },
+        "templateUrl": "medicfastv2_web_apps/topico2_web/views/especificacionrecetas/form.html"
+    }
+},
 ]);

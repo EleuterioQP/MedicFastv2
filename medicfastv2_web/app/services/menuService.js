@@ -31,13 +31,40 @@ app
                 title: 'Historial Medico',
                 type: 'toggle',
                 state: 'topico2.topico2',
-                menu_items: [{
+                menu_items: [  {
                     title: 'Historia medica',
                     state: 'topico2.topico2.historias',
                     type: 'link'
-                },  
+                },
 
-                 ]
+                {
+                    title: 'Consulta',
+                    state: 'topico2.topico2.consultas',
+                    type: 'link'
+                },{
+                    title: 'Diagnostico',
+                    state: 'topico2.topico2.diagnosticos',
+                    type: 'link'
+                },
+              
+                {
+                    title: 'Tratamiento',
+                    state: 'topico2.topico2.tratamientos',
+                    type: 'link'
+                },
+
+                {
+                    title: 'recetas',
+                    state: 'topico2.topico2.especificacionrecetas',
+                    type: 'link'
+                },
+
+
+
+
+
+
+                ]
             }]
         });
 
@@ -66,7 +93,7 @@ app
         //title: 'Sección ui',
         //type: 'heading',
         menu: [{
-            title: 'historial medico',
+            title: 'Reporte institucional',
             type: 'toggle',
             state: 'ui',
             menu_items: [{
@@ -116,45 +143,6 @@ app
                 state: 'auths.system.menu',
                 type: 'link'
             },  ]
-        }]
-    });
-
-
-
-
-
-
-
-
-
-    sections.push({
-
-        menu: [{
-            title: 'Reporte',
-            type: 'toggle',
-            state: 'catalogo.catalogo',
-            menu_items: [{
-                title: 'reporte Institucional',
-                state: 'catalogo.catalogo.categorias',
-                type: 'link'
-            }, {
-                title: 'vista',
-                state: 'catalogo.catalogo.autores',
-                type: 'link'
-            }, ]
-        }]
-    });
- sections.push({
-
-        menu: [{
-            title: 'Topico',
-            type: 'toggle',
-            state: 'topico',
-            menu_items: [{
-                title: 'departamentos',
-                state: 'topico.departamentos',
-                type: 'link'
-            },]
         }]
     });
 

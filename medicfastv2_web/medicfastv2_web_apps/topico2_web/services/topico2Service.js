@@ -13,5 +13,22 @@ app
             "update": { method: 'PUT' },
             }),
 
+        Tratamiento: $resource(url + "tratamientos/:id/", { 'id': '@id' }, {
+            "update": { method: 'PUT' },
+            }),
+
+        Consulta: $resource(url + "consultas/:id/", { 'id': '@id' }, {
+            "update": { method: 'PUT' },
+            }),
+
+        Diagnostico: $resource(url + "diagnosticos/:id/", { 'id': '@id' }, {
+            "update": { method: 'PUT' },
+            }),
+
+        Especificacionreceta: $resource(url + "especificacionrecetas/:id/", { 'id': '@id' }, {
+            "update": { method: 'PUT' },
+            }),
+
+
        };
 });

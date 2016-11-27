@@ -10,33 +10,43 @@
                         <md-card-header-text>
                            
                             <span class="md-headline">Medicamentos </span>
-                            <span class="md-subhead">productos</span>
+                            <span class="md-subhead">productos de tratamiento</span>
                         </md-card-header-text>
                     </md-card-header>
                     <md-card-content>
                         <div layout-gt-sm="row">
                             
                             <md-input-container class="md-block" flex-gt-sm>
-                                <label></label>
+                                <label>nombre del medicamento</label>
                                 <input name="nombre" ng-model="medicamento.nombre" required>
                                 <div ng-messages="dForm.nombre.$error">
                                     <div ng-message="required">This is required.</div>
                                 </div>
                             </md-input-container>
+
+
+                             <md-input-container class="md-block" flex-gt-sm>
+                                <label>Stock</label>
+                                <input name="stock" ng-model="medicamento.stock" required>
+                                <div ng-messages="dForm.stock.$error">
+                                    <div ng-message="required">This is required.</div>
+                                </div>
+                            </md-input-container>
+                            
                         
                         <md-input-container class="md-block" flex-gt-sm>
                                 <label>Precio Compra</label>
-                                <input name="preciocompra" ng-model="medicamento.preciocompra">
+                                <input name="preciocompra" ng-model="medicamento.preciocompra" required>
+                                <div ng-messages="dForm.preciocompra.$error">
+                                    <div ng-message="required">This is required.</div>
+                                </div>
                             </md-input-container>
-                            <md-input-container class="md-block" flex-gt-sm>
-                                <label>Stock</label>
-                                <input name="stock" ng-model="medicamento.stock">
-                            </md-input-container>
+                           
                 
                         </div>
 
                          <div class="sorter">
-                                tipo: 
+                                tipo medicamento: 
                                 <select ng-model="sorting">
                                     <option value="-Price">Pastilla</option>
                                     <option value="Price">Inyeccion</option>

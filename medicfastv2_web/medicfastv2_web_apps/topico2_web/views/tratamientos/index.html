@@ -1,61 +1,59 @@
 <div ng-cloak>
     <md-content class="md-padding" layout-xs="column" layout="row">
         <div flex-xs flex-gt-xs="100" layout="column">
-            <md-card ng-controller="EspecificacionrecetaCtrl">
+            <md-card ng-controller="TratamientoCtrl">
                 <md-card-header>
                     <md-card-avatar>
-                        <img class="md-user-avatar" src="media/img/his.jpg" />
+                        <img class="md-user-avatar" src="media/img/med.jpg" />
                     </md-card-avatar>
                     <md-card-header-text>
-                        <span class="md-headline">Recetas Suministradas</span>
-                        <span class="md-subhead">recetas de acuerdo a las consultas </span>
+                        <span class="md-headline">Tratamientos suministrados</span>
+                        <span class="md-subhead">tratamientos </span>
                     </md-card-header-text>
                 </md-card-header>
                 <md-divider></md-divider>
-                    
                 <md-card-actions layout="row" layout-align="start center" >
-          
-                
-                            <md-button class="md-fab md-mini md-primary" aria-label="Add" ui-sref="topico2.topico2.especificacionrecetasNew">
-                                <md-tooltip md-autohide>Add</md-tooltip>
+                 
+
+                            <md-button class="md-fab md-mini md-primary" aria-label="Registrar tratamiento" ui-sref="topico2.topico2.tratamientosNew">
+                                <md-tooltip md-autohide>Agregar Tratamiento</md-tooltip>
                                 <ng-md-icon icon="add" aria-label="Add"></ng-md-icon>
                             </md-button>
                            
                         </md-card-actions>
-                  
                         
                 <md-card-content>
-                    
+                 <md-card-content>
+
+                     <md-divider></md-divider>
+
+                <md-card-content>
                     <table table-responsive>
                         
                         <md-progress-linear layout-fill md-mode="indeterminate" ng-hide="!isLoading"></md-progress-linear>
                         <thead md-on-reorder="onReorder">
                             <tr>
                                 <th>N°</th>
-                                <th class="col-hidden" data-order="cantidad">cantidad</th>
-                                <th>Dosis</th>
-                                <th>Periodo</th>
-                                
-                                <th>Importe</th>
-                                <th>Precio</th>
-                                <th>Fecha creada</th>
-                                <th>Recomendacion</th>                                
-                                <th colspan="2"  class="align-options">acciones</th>
+                                <th class="col-hidden" data-order="diagnostico" >Diagnostico</th>
+                                <th>Periodo descanso</th>                                
+                                <th>Cita Programada</th>
+                                <th>Administracion</th>
+                                <th>Fecha de creacion</th>
+                                <th colspan="2"  class="align-options">Acciones</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr ng-repeat="d in lista | filter: cantidad">
+                            <tr ng-repeat="d in lista " >
                                 <td> {{ $index + 1 }} </td>
-                                <td> {{ d.cantidad }} </td>
-                                <td> {{ d.dosis }} </td>
-                                <td> {{ d.periodo }} </td>
+                                <td> {{ d.diagnostico }} </td>
+                                <td> {{ d.periododescanso }} </td>
                                 
-                                <td> {{ d.importe }} </td>
-                                <td> {{ d.precio_venta }} </td>
-                                <td> {{ d.created_at }} </td>
-                                <td> {{ d.recomendacion }} </td>
+                                <td> {{ d.citafecha | date:'dd/MM/yyyy h:mma'}} </td>
+                                <td> {{ d.aministracion }} </td>
+                                <td> {{ d.fecha | date:'dd/MM/yyyy h:mma'}} </td>
+
                                 <td>
-                                    <md-button class="md-icon-button md-td" aria-label="Edit" ui-sref="topico2.topico2.especificacionrecetasEdit({id:d.id})">
+                                    <md-button class="md-icon-button md-td" aria-label="Edit" ui-sref="topico2.topico2.tratamientosEdit({id:d.id})">
                                         <md-tooltip md-autohide>Edit {{ d.codename }}</md-tooltip>
                                         <ng-md-icon  size="24" icon="edit" aria-label="Edit"></ng-md-icon>
                                     </md-button>

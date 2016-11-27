@@ -20,8 +20,32 @@ app
             "list": { method: 'GET', isArray: true, params: { query: '@query' } }
 
         }),
+        Consulta: $resource(url + "consultas/:id/", { 'id': '@id' }, {
+            "update": { method: 'PUT' },
+            "list": { method: 'GET', isArray: true, params: { query: '@query' } }
+
+        }),
+
 
          Medicamento: $resource(url + "medicamentos/:id/", { 'id': '@id' }, {
+            "update": { method: 'PUT' },
+            "list": { method: 'GET', isArray: true, params: { query: '@query' } }
+
+        }),
+
+         Tratamiento: $resource(url + "tratamientos/:id/", { 'id': '@id' }, {
+            "update": { method: 'PUT' },
+            "list": { method: 'GET', isArray: true, params: { query: '@query' } }
+
+        }),
+
+         Diagnostico: $resource(url + "diagnosticos/:id/", { 'id': '@id' }, {
+            "update": { method: 'PUT' },
+            "list": { method: 'GET', isArray: true, params: { query: '@query' } }
+
+        }),
+
+         EspecificacionReceta: $resource(url + "especificacionrecetas/:id/", { 'id': '@id' }, {
             "update": { method: 'PUT' },
             "list": { method: 'GET', isArray: true, params: { query: '@query' } }
 

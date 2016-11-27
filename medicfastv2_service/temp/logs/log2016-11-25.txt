@@ -85,3 +85,4 @@
 [2016-11-25 20:39:12] [INFO] [medicfastv2_service_apps.auths_api.user_view:78] [/api/auths/localuserinfo/] [127.0.0.1] [admin] [GET] User is authenticated
 [2016-11-25 20:40:01] [INFO] [medicfastv2_service_apps.auths_api.user_view:78] [/api/auths/localuserinfo/] [127.0.0.1] [admin] [GET] User is authenticated
 [2016-11-25 20:41:10] [INFO] [medicfastv2_service_apps.auths_api.user_view:78] [/api/auths/localuserinfo/] [127.0.0.1] [admin] [GET] User is authenticated
+[2016-11-25 21:42:38] [INFO] [medicfastv2_service_apps.auths_api.user_view:78] [/api/auths/localuserinfo/] [127.0.0.1] [admin] [GET] User is authenticated

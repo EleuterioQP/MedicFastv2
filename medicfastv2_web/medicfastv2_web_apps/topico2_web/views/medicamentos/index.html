@@ -15,43 +15,48 @@
                 <md-card-actions layout="row" layout-align="start center" >
 
                      <md-card-icon-actions>
-                                <md-input-container class="md-block md-search">
-                                    <input placeholder="Buscar" ng-model="query" ng-keyup="buscar()">
+                                <md-input-container class="md-block md-search" flex-gt-sm>
+                                    <input placeholder="Buscar medicamento" ng-model="query" ng-keyup="buscar()">
                                 </md-input-container>
                                 <md-button class="md-icon-button" aria-label="Share">
                                     
                                 </md-button>
                             </md-card-icon-actions>
 
-                            <md-button class="md-icon-button" aria-label="Add" ui-sref="topico2.topico2.medicamentosNew">
-                                <md-tooltip md-autohide>Add</md-tooltip>
+                            <md-button class="md-fab md-mini md-primary" aria-label="Add" ui-sref="topico2.topico2.medicamentosNew">
+                                <md-tooltip md-autohide>Agregar medicamento</md-tooltip>
                                 <ng-md-icon icon="add" aria-label="Add"></ng-md-icon>
                             </md-button>
                            
                         </md-card-actions>
                         
                 <md-card-content>
-                    
+                 <md-card-content>
+
+                     <md-divider></md-divider>
+
+                <md-card-content>
                     <table table-responsive>
                         
                         <md-progress-linear layout-fill md-mode="indeterminate" ng-hide="!isLoading"></md-progress-linear>
                         <thead md-on-reorder="onReorder">
                             <tr>
-                                <th>#</th>
-                                <th class="col-hidden" data-order="nombre">nombre</th>
-                                <th>Precion compra</th>
+                                <th>N°</th>
+                                <th class="col-hidden" data-order="nombre" >Nombre medicamento</th>
                                 <th>Stock</th>
-                                <th>Fecha</th>
+                                <th>Precio</th>
+                                <th>Fecha de registro</th>
                                 <th>Tipo</th>
                                 <th colspan="2"  class="align-options">Acciones</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr ng-repeat="d in lista | filter: nombre">
+                            <tr ng-repeat="d in lista " >
                                 <td> {{ $index + 1 }} </td>
                                 <td> {{ d.nombre }} </td>
-                                <td> {{ d.preciocompra }} </td>
                                 <td> {{ d.stock }} </td>
+                                <td> {{ d.preciocompra }} </td>
+                                
                                 <td> {{ d.fecha | date:'dd/MM/yyyy h:mma'}} </td>
                                 <td> {{ d.tipo }} </td>
 

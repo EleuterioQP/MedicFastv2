@@ -12,23 +12,26 @@
                     </md-card-header-text>
                 </md-card-header>
                 <md-divider></md-divider>
+                   
                 <md-card-actions layout="row" layout-align="start center" >
+          
 
                      <md-card-icon-actions>
-                                <md-input-container class="md-block md-search">
-                                    <input placeholder="Buscar" ng-model="query" ng-keyup="buscar()">
+                                <md-input-container class="md-block md-search" flex-gt-sm>
+                                    <input placeholder="Buscar numero de historia" ng-model="query" ng-keyup="buscar()">
                                 </md-input-container>
-                                <md-button class="md-icon-button" aria-label="Share">
-                                    
-                                </md-button>
+                                
                             </md-card-icon-actions>
+                             
+                             <md-divider></md-divider>
 
-                            <md-button class="md-icon-button" aria-label="Add" ui-sref="topico2.topico2.historiasNew">
-                                <md-tooltip md-autohide>Add</md-tooltip>
+                            <md-button class="md-fab md-mini md-primary" aria-label="Add" ui-sref="topico2.topico2.historiasNew" >
+                                <md-tooltip md-autohide>registrar historia</md-tooltip>
                                 <ng-md-icon icon="add" aria-label="Add"></ng-md-icon>
                             </md-button>
                            
-                        </md-card-actions>
+                       
+                  </md-card-actions>
                         
                 <md-card-content>
                     

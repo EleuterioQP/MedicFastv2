@@ -6,7 +6,7 @@ from .consulta import Consulta
 
 class Tratamiento(models.Model):
     """
-    Description: Model Description
+        Description: Model Description
     """
     consulta = models.OneToOneField(Consulta)
     diagnostico = models.TextField(null=True, blank=True)
