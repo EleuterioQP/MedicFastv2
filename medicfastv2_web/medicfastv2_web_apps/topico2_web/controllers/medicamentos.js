@@ -71,17 +71,7 @@ app
     }
 
     $scope.save = function() {
-        if ($scope.medicamento.id) {
-            topico2Service.Medicamento.update({ id: $scope.medicamento.id }, $scope.medicamento, function(r) {
-                $log.log("r: " + JSON.stringify(r));
-                toastr.success('Se editó la medicamento ' + r.nombre, 'medicamento');
-                $state.go('topico2.topico2.medicamentos');
-            }, function(err) {
-                $log.log("Error in update:" + JSON.stringify(err));
-                toastr.error(err.data.detail, err.status + ' ' + err.statusText);
-            });
-        } else {
-            topico2Service.Medicamento.save($scope.medicamento, function(r) {
+                topico2Service.Medicamento.save($scope.medicamento, function(r) {
                 $log.log("r: " + JSON.stringify(r));
                 toastr.success('Se insertó la medicamento ' + r.nombre, 'medicamento');
                 $state.go('topico2.topico2.medicamentos');
@@ -89,7 +79,7 @@ app
                 $log.log("Error in save:" + JSON.stringify(err));
                 toastr.error(err.data.detail, err.status + ' ' + err.statusText);
             });
-        }
+        
     };
 
     $scope.cancel = function() {

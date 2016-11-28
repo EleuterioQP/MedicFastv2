@@ -41,10 +41,6 @@ app
                     title: 'Consulta',
                     state: 'topico2.topico2.consultas',
                     type: 'link'
-                },{
-                    title: 'Diagnostico',
-                    state: 'topico2.topico2.diagnosticos',
-                    type: 'link'
                 },
               
                 {
@@ -68,32 +64,12 @@ app
             }]
         });
 
-        sections.push({
 
-            menu: [{
-                title: 'Mantenimiento',
-                type: 'toggle',
-                state: 'topico2.topico2',
-                menu_items: [{
-                    title: 'Medicamento',
-                    state: 'topico2.topico2.medicamentos',
-                    type: 'link'
-                }, 
-
-                 ]
-            }]
-
-        });
-
-
-
-
-
-    sections.push({
+sections.push({
         //title: 'Sección ui',
         //type: 'heading',
         menu: [{
-            title: 'Reporte institucional',
+            title: 'Topico prueba',
             type: 'toggle',
             state: 'ui',
             menu_items: [{
@@ -105,29 +81,55 @@ app
                 state: 'ui.test2',
                 type: 'link'
             }, {
-                title: 'Transferencia',
+                title: 'Antecedentes',
                 state: 'ui.test3',
                 type: 'link'
-            }, {
-                title: 'Consulta',
-                state: 'ui.test4',
-                type: 'link'
-            }, {
-                title: 'Diagnostico',
-                state: 'ui.test5',
-                type: 'link'
-            }, {
-                title: 'Tratamiento',
-                state: 'ui.dir',
-                type: 'link'
-            }, ]
+            },  ]
         }]
     });
+
+
+
+
+
+
+        sections.push({
+
+            menu: [{
+                title: 'Mantenimiento',
+                type: 'toggle',
+                state: 'topico2.topico2',
+                menu_items: [{
+                    title: 'Medicamento',
+                    state: 'topico2.topico2.medicamentos',
+                    type: 'link'
+                }, 
+                {
+                    title: 'Diagnostico',
+                    state: 'topico2.topico2.diagnosticos',
+                    type: 'link'
+                },
+                {
+                    title: 'trabajador',
+                    state: 'auths.system.permission',
+                    type: 'link'
+                },
+
+                 ]
+            }]
+
+        });
+
+
+
+
+
+    
 
     sections.push({
 
         menu: [{
-            title: 'Mantenimiento',
+            title: 'reporte prueba',
             type: 'toggle',
             state: 'auths.system',
             menu_items: [{

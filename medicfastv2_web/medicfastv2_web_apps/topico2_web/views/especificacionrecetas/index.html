@@ -11,18 +11,7 @@
                         <span class="md-subhead">recetas de acuerdo a las consultas </span>
                     </md-card-header-text>
                 </md-card-header>
-                <md-divider></md-divider>
-                    
-                <md-card-actions layout="row" layout-align="start center" >
-          
-                
-                            <md-button class="md-fab md-mini md-primary" aria-label="Add" ui-sref="topico2.topico2.especificacionrecetasNew">
-                                <md-tooltip md-autohide>Add</md-tooltip>
-                                <ng-md-icon icon="add" aria-label="Add"></ng-md-icon>
-                            </md-button>
-                           
-                        </md-card-actions>
-                  
+                <md-divider></md-divider>        
                         
                 <md-card-content>
                     
@@ -56,8 +45,8 @@
                                 <td> {{ d.recomendacion }} </td>
                                 <td>
                                     <md-button class="md-icon-button md-td" aria-label="Edit" ui-sref="topico2.topico2.especificacionrecetasEdit({id:d.id})">
-                                        <md-tooltip md-autohide>Edit {{ d.codename }}</md-tooltip>
-                                        <ng-md-icon  size="24" icon="edit" aria-label="Edit"></ng-md-icon>
+                                        <md-tooltip md-autohide>ver {{ d.codename }}</md-tooltip>
+                                        <ng-md-icon  size="24" icon="look" aria-label="Look"></ng-md-icon>
                                     </md-button>
                                 </td>
                                 <td>
