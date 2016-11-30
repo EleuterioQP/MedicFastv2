@@ -1,5 +1,7 @@
 from django.db import models
 from .consulta import Consulta
+from medicfastv2_service_apps.auths.models.user import User
+
 
 # Create your models here.
 
@@ -14,6 +16,7 @@ class Tratamiento(models.Model):
     fecha = models.DateTimeField(auto_now=True)
     citafecha = models.DateTimeField(null=True, blank=True)
     aministracion = models.BooleanField(default=True)
+    user = models.ForeignKey(User)
 
     class Meta:
         verbose_name = "Tratamiento"
