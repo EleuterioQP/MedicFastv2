@@ -29,6 +29,22 @@ app
             "update": { method: 'PUT' },
             }),
 
+        Departamento: $resource(url + "departamentos/:id/", { 'id': '@id' }, {
+            "update": { method: 'PUT' },
+            }),
+
+        Paciente: $resource(url + "pacientes/:id/", { 'id': '@id' }, {
+            "update": { method: 'PUT' },
+            }),
+
+        Funcionvital: $resource(url + "funcionvitals/:id/", { 'id': '@id' }, {
+            "update": { method: 'PUT' },
+            }),
+
+        Antecedentemedico: $resource(url + "antecedentemedicos/:id/", { 'id': '@id' }, {
+            "update": { method: 'PUT' },
+            }),
+
 
        };
 });

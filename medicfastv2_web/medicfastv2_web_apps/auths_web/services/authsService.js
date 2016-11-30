@@ -27,25 +27,49 @@ app
         }),
 
 
-         Medicamento: $resource(url + "medicamentos/:id/", { 'id': '@id' }, {
+        Medicamento: $resource(url + "medicamentos/:id/", { 'id': '@id' }, {
             "update": { method: 'PUT' },
             "list": { method: 'GET', isArray: true, params: { query: '@query' } }
 
         }),
 
-         Tratamiento: $resource(url + "tratamientos/:id/", { 'id': '@id' }, {
+        Tratamiento: $resource(url + "tratamientos/:id/", { 'id': '@id' }, {
             "update": { method: 'PUT' },
             "list": { method: 'GET', isArray: true, params: { query: '@query' } }
 
         }),
 
-         Diagnostico: $resource(url + "diagnosticos/:id/", { 'id': '@id' }, {
+        Diagnostico: $resource(url + "diagnosticos/:id/", { 'id': '@id' }, {
             "update": { method: 'PUT' },
             "list": { method: 'GET', isArray: true, params: { query: '@query' } }
 
         }),
 
-         EspecificacionReceta: $resource(url + "especificacionrecetas/:id/", { 'id': '@id' }, {
+        EspecificacionReceta: $resource(url + "especificacionrecetas/:id/", { 'id': '@id' }, {
+            "update": { method: 'PUT' },
+            "list": { method: 'GET', isArray: true, params: { query: '@query' } }
+
+        }),
+
+        DepartamentoReceta: $resource(url + "departamentos/:id/", { 'id': '@id' }, {
+            "update": { method: 'PUT' },
+            "list": { method: 'GET', isArray: true, params: { query: '@query' } }
+
+        }),
+
+        PacienteReceta: $resource(url + "pacientes/:id/", { 'id': '@id' }, {
+            "update": { method: 'PUT' },
+            "list": { method: 'GET', isArray: true, params: { query: '@query' } }
+
+        }),
+
+        Antecedentemedico: $resource(url + "antecedentemedicos/:id/", { 'id': '@id' }, {
+            "update": { method: 'PUT' },
+            "list": { method: 'GET', isArray: true, params: { query: '@query' } }
+
+        }),
+
+        FuncionvitalReceta: $resource(url + "funcionvitals/:id/", { 'id': '@id' }, {
             "update": { method: 'PUT' },
             "list": { method: 'GET', isArray: true, params: { query: '@query' } }
 

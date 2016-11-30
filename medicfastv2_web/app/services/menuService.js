@@ -66,27 +66,31 @@ app
 
 
 sections.push({
-        //title: 'Sección ui',
-        //type: 'heading',
-        menu: [{
-            title: 'Topico prueba',
-            type: 'toggle',
-            state: 'ui',
-            menu_items: [{
-                title: 'Pacientes',
-                state: 'ui.test1',
-                type: 'link'
-            }, {
-                title: 'Funciones vitales',
-                state: 'ui.test2',
-                type: 'link'
-            }, {
-                title: 'Antecedentes',
-                state: 'ui.test3',
-                type: 'link'
-            },  ]
-        }]
-    });
+
+            menu: [{
+                title: 'Topico',
+                type: 'toggle',
+                state: 'topico2.topico2',
+                menu_items: [{
+                    title: 'DEpartamento',
+                    state: 'topico2.topico2.departamentos',
+                    type: 'link'
+                }, 
+                {
+                    title: 'Diagnostico',
+                    state: 'topico2.topico2.diagnosticos',
+                    type: 'link'
+                },
+                {
+                    title: 'trabajador',
+                    state: 'auths.system.permission',
+                    type: 'link'
+                },
+
+                 ]
+            }]
+
+        });
 
 
 

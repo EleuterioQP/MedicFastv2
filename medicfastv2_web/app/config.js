@@ -291,4 +291,30 @@ app.constant('ROUTERS', [{
         "templateUrl": "medicfastv2_web_apps/topico2_web/views/especificacionrecetas/form.html"
     }
 },
+{ 
+    "topico2.topico2.departamentos": {
+        "url": "/departamentos",
+        "data": {
+            "section": "Departamento",
+            "page": "Departamentos"
+        },
+        "templateUrl": "medicfastv2_web_apps/topico2_web/views/departamentos/index.html"
+    },
+    "topico2.topico2.departamentosNew": {
+        "url": "/departamentos/new",
+        "data": {
+            "section": "Departamento",
+            "page": "Departamentos"
+        },
+        "templateUrl": "medicfastv2_web_apps/topico2_web/views/departamentos/form.html"
+    },
+    "topico2.topico2.departamentosEdit": {
+        "url": "/departamentos/:id/edit",
+        "data": {
+            "section": "Departamento",
+            "page": "Departamentos"
+        },
+        "templateUrl": "medicfastv2_web_apps/topico2_web/views/departamentos/form.html"
+    }
+},
 ]);
